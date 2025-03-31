@@ -1,4 +1,4 @@
-name: autodock-ui
+name: autodock-be
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    name: Build and Push Docker Image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,4 +19,4 @@ jobs:
           tags: latest
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKER_ACCESSCODE }}
