@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoDock Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="./assets/logo_no_back.png" alt="AutoDock Logo" class="logo" />
+          </div>
+          
+      <nav>
+        <a href="pages/webhook.html" class="active">🔗 Webhook Setup</a>
+        <a href="pages/compose.html">📦 Compose Builder</a>
+        <a href="pages/nginx.html">🌐 NGINX + SSL</a>
+        <a href="pages/logs.html">📊 Logs & LLM</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+    
+
+      <!-- Metrics -->
+      <section class="metrics">
+        <div class="metric-card">
+          <img src="./assets/cpu.png" alt="CPU Icon" class="metric-icon" />
+          <div class="metric-label"><strong>CPU</strong></div>
+          <div class="metric-value" id="cpu">--%</div>
+        </div>
+      
+        <div class="metric-card">
+          <img src="./assets/ram.png" alt="Memory Icon" class="metric-icon" />
+          <div class="metric-label"><strong>Memory</strong></div>
+          <div class="metric-value" id="memory">--%</div>
+        </div>
+      
+        <div class="metric-card">
+          <img src="./assets/hard-disk.png" alt="Disk Icon" class="metric-icon" />
+          <div class="metric-label"><strong>Disk</strong></div>
+          <div class="metric-value" id="disk">--%</div>
+        </div>
+      </section>
+      
+      
+
+      <!-- Containers Table -->
+      <section class="container-table">
+        <h2>Running Containers</h2>
+        <div class="table-wrapper">
+          <table id="containersTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>IP</th>
+                <th>Ports</th>
+              </tr>
+            </thead>
+            <tbody id="containersBody">
+              <tr><td colspan="5" style="text-align:center;">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

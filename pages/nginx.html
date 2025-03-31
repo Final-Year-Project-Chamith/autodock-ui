@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoDock - NGINX Config</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🌐 NGINX & SSL Configuration</h2>
+    <form id="nginxForm">
+      <label for="serverName">Domain Name</label>
+      <input type="text" id="serverName" placeholder="e.g. irvc.autodock.me" required>
+
+      <label for="port">App Port</label>
+      <input type="text" id="port" placeholder="e.g. 3000" required>
+
+      <button type="submit">Send to Backend</button>
+    </form>
+
+    <p class="status-message" id="nginxMessage"></p>
+
+    <p style="text-align:center; margin-top:30px;">
+      <a href="../index.html">⬅ Back to Dashboard</a>
+    </p>
+  </div>
+
+  <script src="../js/nginx.js"></script>
+</body>
+</html>

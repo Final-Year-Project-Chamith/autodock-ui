@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoDock - GitHub Webhook</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🔗 Create GitHub Webhook</h2>
+    <form id="webhookForm">
+      <label for="owner">Owner</label>
+      <input type="text" id="owner" name="owner" placeholder="e.g. Chamixth" required>
+
+      <label for="repo">Repo</label>
+      <input type="text" id="repo" name="repo" placeholder="e.g. real-estate-website" required>
+
+      <label for="token">Token</label>
+      <input type="password" id="token" name="token" placeholder="GitHub Personal Access Token" required>
+
+      <label for="webhookUrl">Webhook URL</label>
+      <input type="url" id="webhookUrl" name="webhookUrl" placeholder="https://yourdomain.com/api/webhook" required>
+
+      <label for="secret">Secret</label>
+      <input type="text" id="secret" name="secret" placeholder="Webhook secret key" required>
+
+      <button type="submit">Create Webhook</button>
+    </form>
+    <p class="status-message" id="statusMessage"></p>
+    <p style="text-align:center; margin-top:30px;"><a href="../index.html">⬅ Back to Dashboard</a></p>
+  </div>
+
+  <script src="../js/webhook.js"></script>
+</body>
+</html>
