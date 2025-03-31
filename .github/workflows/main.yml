@@ -3,7 +3,7 @@ name: autodock-ui
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
